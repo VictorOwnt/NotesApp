@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NotesApp</string>
+    <string name="addNote">Notitie toevoegen</string>
+    <string name="noNotesYet">Je hebt nog geen notities.</string>
+    <string name="remove">Verwijderen</string>
+    <string name="edit">Aanpassen</string>
+    <string name="action_note">Toevoegen</string>
+    <string name="action_note_edit">Aanpassen</string>
+    <string name="prompt_title">Titel</string>
+    <string name="prompt_content">Content</string>
+    <string name="required">Required</string>
+    <string name="copy">Copy</string>
+</resources>
