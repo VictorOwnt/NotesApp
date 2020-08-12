@@ -4,7 +4,9 @@ import be.scoutswondelgem.notesapp.api.NotesApiClient
 import be.scoutswondelgem.notesapp.database.daos.NoteDao
 import be.scoutswondelgem.notesapp.repository.NotesRepository
 import org.koin.dsl.module.module
-
+/**
+ * The *repositoryModule*.
+ */
 val repositoryModule = module {
     single { provideNotesRepository(get(), get()) }
 }

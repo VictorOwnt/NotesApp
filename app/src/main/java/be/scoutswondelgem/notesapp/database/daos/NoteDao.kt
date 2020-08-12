@@ -4,6 +4,13 @@ import androidx.room.*
 import be.scoutswondelgem.notesapp.database.entities.NoteDataModel
 import io.reactivex.Flowable
 
+/**
+ * The *NoteDao*.
+ *
+ * This class makes it possible to access the data from the database;
+ * see it as a table in SQL.
+ *
+ */
 @Dao
 interface NoteDao {
     @Query("SELECT * from Notes")

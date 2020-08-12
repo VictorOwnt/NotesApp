@@ -1,5 +1,9 @@
 package be.scoutswondelgem.notesapp.utils
-
+/**
+ * The *Constants*.
+ *
+ * This class contains all constant values in the NotesApp.
+ */
 object Constants {
     /**
      * Base url for connection with backend REST server

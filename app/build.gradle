@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.dokka'
 
 android {
     compileSdkVersion 29
@@ -18,18 +19,31 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    // Dokka used for auto-generation documentation
+    dokka {
+        outputFormat = 'html'
+        outputDirectory = "$buildDir/dokka"
 
+        configuration {
+            // Do not output deprecated members
+            skipDeprecated = true
+
+            // Emit warnings about not documented members.
+            reportUndocumented = true
+
+            // Do not create index pages for empty packages
+            skipEmptyPackages = true
+        }
+    }
 }
 
 dependencies {
@@ -89,4 +103,10 @@ dependencies {
     //Okhttp3
     implementation "com.squareup.okhttp3:okhttp:4.2.2"
     implementation "com.squareup.okhttp3:logging-interceptor:4.2.2"
+}
+
+// workaround: create DocsByDokka
+task DocsByDokka (type: org.jetbrains.dokka.gradle.DokkaTask) {
+    outputFormat = "html"
+    outputDirectory = "$buildDir/dokka"
 }

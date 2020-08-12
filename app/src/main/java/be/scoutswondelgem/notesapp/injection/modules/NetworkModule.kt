@@ -14,7 +14,9 @@ import org.koin.dsl.module.module
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
-
+/**
+ * The *networkModule*.
+ */
 val networkModule = module {
     single { provideOkHttpClient(get()) }
     single { provideNotesApi(get()) }

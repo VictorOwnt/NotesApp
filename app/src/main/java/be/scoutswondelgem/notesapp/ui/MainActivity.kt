@@ -8,7 +8,9 @@ import be.scoutswondelgem.notesapp.R
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.app_bar_main.*
-
+/**
+ * The *MainActivity*.
+ */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

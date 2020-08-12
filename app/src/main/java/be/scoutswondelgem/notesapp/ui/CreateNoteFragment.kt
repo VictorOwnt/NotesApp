@@ -17,7 +17,11 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.fragment_create_note.view.*
 import org.koin.android.viewmodel.ext.android.viewModel
-
+/**
+ * The *CreateNoteFragment*.
+ *
+ * This class is bound to the screen for creating a new note.
+ */
 class CreateNoteFragment: Fragment() {
     //Voor creatie CreateNoteFragment
     companion object {

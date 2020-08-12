@@ -20,7 +20,11 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_edit_note.view.*
 import org.koin.android.viewmodel.ext.android.viewModel
-
+/**
+ * The *EditNoteFragment*.
+ *
+ * This class is bound to the screen for editing a new note.
+ */
 private const val ARG_NOTE_ID = "noteId"
 
 class EditNoteFragment: Fragment() {

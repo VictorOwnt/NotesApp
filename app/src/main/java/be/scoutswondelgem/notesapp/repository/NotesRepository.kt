@@ -8,7 +8,11 @@ import io.reactivex.Flowable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import retrofit2.HttpException
-
+/**
+ * The *NotesRepository*.
+ *
+ * This class fixes all interaction with the api and the room database.
+ */
 class NotesRepository(private val notesApiClient: NotesApiClient, private val dao: NoteDao) {
     //RxJava
     private var disposables = CompositeDisposable()

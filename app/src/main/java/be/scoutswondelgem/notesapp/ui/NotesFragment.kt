@@ -26,7 +26,11 @@ import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_notes.view.*
 import kotlinx.android.synthetic.main.notes_list.*
 import org.koin.android.viewmodel.ext.android.viewModel
-
+/**
+ * The *createNoteFragment*.
+ *
+ * This class is bound to the screen for displaying notes.
+ */
 class NotesFragment :
     Fragment() {
     //Voor creatie NotesFragment

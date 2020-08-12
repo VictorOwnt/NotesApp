@@ -7,6 +7,13 @@ import androidx.room.RoomDatabase
 import be.scoutswondelgem.notesapp.database.daos.NoteDao
 import be.scoutswondelgem.notesapp.database.entities.NoteDataModel
 
+/**
+ * The *NotesDatabase*.
+ *
+ * This class is the room database of the application.
+ *
+ * @property noteDao the object that makes the notes accessible.
+ */
 @Database(entities = [NoteDataModel::class], version = 1, exportSchema = false)
 abstract class NotesDatabase : RoomDatabase() {
 

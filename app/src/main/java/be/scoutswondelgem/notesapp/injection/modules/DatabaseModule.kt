@@ -4,7 +4,9 @@ import android.content.Context
 import be.scoutswondelgem.notesapp.database.NotesDatabase
 import be.scoutswondelgem.notesapp.database.daos.NoteDao
 import org.koin.dsl.module.module
-
+/**
+ * The *databaseModule*.
+ */
 val databaseModule = module {
     single { provideDatabase(get()) }
     single { provideNotesDao(get()) }

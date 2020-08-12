@@ -10,6 +10,16 @@ import be.scoutswondelgem.notesapp.R
 import be.scoutswondelgem.notesapp.database.entities.NoteDataModel
 import kotlinx.android.synthetic.main.row_note.view.*
 
+/**
+ * The *NotesAdapter*.
+ *
+ * This class is used to display the *notes*.
+ *
+ * @property onItemClick is a clickhandler.
+ * @property onItemClick2 is a clickhandler.
+ * @property onItemClick3 is a clickhandler.
+ *
+ */
 class NotesAdapter(private var notesList: List<NoteDataModel>): RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
     //for the transaction of fragments
     var onItemClick: ((NoteDataModel) -> Unit)? = null

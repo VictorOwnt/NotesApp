@@ -7,7 +7,9 @@ import be.scoutswondelgem.notesapp.database.entities.NoteDataModel
 import be.scoutswondelgem.notesapp.repository.NotesRepository
 import com.orhanobut.logger.Logger
 import io.reactivex.Flowable
-
+/**
+ * The *NotesViewModel*.
+ */
 class NotesViewModel(private val notesRepository: NotesRepository):  ViewModel() {
     //LoadingVisibility:
     val loadingVisibility = MutableLiveData<Int>()

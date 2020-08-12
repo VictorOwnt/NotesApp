@@ -3,7 +3,11 @@ package be.scoutswondelgem.notesapp.api
 import be.scoutswondelgem.notesapp.api.models.Note
 import io.reactivex.Single
 import retrofit2.http.*
-
+/**
+ * The *NotesApiClient*.
+ *
+ * This class contains all requests that can be made to the Api.
+ */
 interface NotesApiClient {
 
     /**
