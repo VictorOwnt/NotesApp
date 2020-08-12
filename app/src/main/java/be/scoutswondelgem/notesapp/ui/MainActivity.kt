@@ -27,11 +27,13 @@ class MainActivity : AppCompatActivity() {
         Logger.addLogAdapter(AndroidLogAdapter())
 
         // Navigate to right fragment
-        this.supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.main_content_container, NotesFragment.newInstance(), "NotesFragment")
-            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-            .addToBackStack("NotesFragment")
-            .commit()
+        if(savedInstanceState == null) {
+            this.supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.main_content_container, NotesFragment.newInstance(), "NotesFragment")
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .addToBackStack("NotesFragment")
+                .commit()
+        }
     }
 }
