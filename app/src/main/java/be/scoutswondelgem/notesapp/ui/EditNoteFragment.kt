@@ -26,9 +26,14 @@ import org.koin.android.viewmodel.ext.android.viewModel
  * This class is bound to the screen for editing a new note.
  */
 private const val ARG_NOTE_ID = "noteId"
+private const val ARG_NOTE_CONTENT = "content"
+private const val ARG_NOTE_TITLE = "title"
 
 class EditNoteFragment: Fragment() {
     private var noteId: Int? = null
+    private var noteTitle: String? = null
+    private var noteContent: String? = null
+
     //Voor creatie EditNoteFragment
     companion object {
         @JvmStatic
@@ -56,6 +61,16 @@ class EditNoteFragment: Fragment() {
         arguments?.let {
             noteId = it.getInt(ARG_NOTE_ID)
         }
+        if (savedInstanceState != null) {
+            noteTitle = savedInstanceState.getString(ARG_NOTE_TITLE)
+            noteContent = savedInstanceState.getString(ARG_NOTE_CONTENT)
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(ARG_NOTE_TITLE, titleInput.text.toString())
+        outState.putString(ARG_NOTE_CONTENT, contentInput.text.toString())
     }
 
     override fun onCreateView(
@@ -86,15 +101,20 @@ class EditNoteFragment: Fragment() {
     }
 
     private fun fillNoteView(noteId: Int) {
-        notesViewModel.getNoteById(noteId)?.let {
-            notesViewModel.getNoteById(noteId)!!
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ note ->
-                    Logger.i("Getting note by id from database")
-                    titleInput.setText(note.title)
-                    contentInput.setText(note.content)
-                }, { error -> Logger.e(error.message!!) })
+        if(noteTitle == null && noteContent == null) {
+            notesViewModel.getNoteById(noteId)?.let {
+                notesViewModel.getNoteById(noteId)!!
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe({ note ->
+                        Logger.i("Getting note by id from database")
+                        titleInput.setText(note.title)
+                        contentInput.setText(note.content)
+                    }, { error -> Logger.e(error.message!!) })
+            }
+        } else {
+            titleInput.setText(noteTitle)
+            contentInput.setText(noteContent)
         }
     }
 
