@@ -10,15 +10,11 @@ This project is part of the [Native Apps I](https://bamaflexweb.hogent.be/BMFUID
 ## Screenshots
 
 <p align="center">
-    <img src="./screenshots/login.png?raw=true" width="256px">
-    <img src="./screenshots/register.png?raw=true" width="256px">
-    <img src="./screenshots/mBestellingen.png?raw=true" width="256px">
-    <img src="./screenshots/nav.png?raw=true" width="256px">
-    <img src="./screenshots/create.png?raw=true" width="256px">
-    <img src="./screenshots/aBestellingen.png?raw=true" width="256px">
-    <img src="./screenshots/stats.png?raw=true" width="256px">
-    <img src="./screenshots/editProfile.png?raw=true" width="256px">
-    <img src="./screenshots/search.png?raw=true" width="256px">
+    <img src="screenshots/overview.jpg?raw=true" width="256px">
+    <img src="screenshots/create.jpg?raw=true" width="256px">
+    <img src="screenshots/edit.jpg?raw=true" width="256px">
+    <img src="screenshots/delete.jpg?raw=true" width="256px">
+    <img src="screenshots/copy.jpg?raw=true" width="256px">
 </p>
 
 ---
