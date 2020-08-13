@@ -67,6 +67,11 @@ class EditNoteFragment: Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        activity!!.title = resources.getString(R.string.edit_note)
+    }
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(ARG_NOTE_TITLE, titleInput.text.toString())

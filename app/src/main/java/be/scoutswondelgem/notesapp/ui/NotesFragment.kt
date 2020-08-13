@@ -49,6 +49,11 @@ class NotesFragment :
     //Injecteren:
     private val notesViewModel by viewModel<NotesViewModel>()
 
+    override fun onResume() {
+        super.onResume()
+        activity!!.title = resources.getString(R.string.my_notes)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR
 
-        title = "My Notes"
+        title = resources.getString(R.string.my_notes)
         setContentView(R.layout.activity_main)
 
         //Toolbar menu

@@ -73,14 +73,12 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/input_title"
+                            style="@style/Title"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:hint="@string/prompt_title"
-                            android:inputType="textShortMessage"
-                            android:textColor="@color/colorText"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:inputType="textShortMessage" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -91,6 +89,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/input_content"
+                            style="@style/Content"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
@@ -104,13 +103,13 @@
 
             <Button
                 android:id="@+id/button_addNote"
+                style="@style/Button"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="@dimen/default_horizontal_margin"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="@dimen/default_horizontal_margin"
                 android:layout_marginBottom="@dimen/default_vertical_margin"
-                android:backgroundTint="@color/colorAccent"
                 android:text="@string/action_note"
                 android:enabled="false"
                 android:background="@drawable/drawable_cornered_button"
