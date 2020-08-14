@@ -75,10 +75,10 @@ class CreateNoteFragment: Fragment() {
         val content = contentInput.text.toString()
         val created = notesViewModel.createNote(title, content)
         if (created) {
-            Toast.makeText(activity, "Note created successfully" , Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Notitie succesvol aangemaakt." , Toast.LENGTH_SHORT).show()
             activity?.supportFragmentManager!!.popBackStack()
         } else {
-            Toast.makeText(activity, "Something went wrong while creating the note" , Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Er ging iets fout tijdens het aanmaken van de notitie." , Toast.LENGTH_SHORT).show()
         }
 
     }

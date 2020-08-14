@@ -128,10 +128,10 @@ class EditNoteFragment: Fragment() {
         val content = contentInput.text.toString()
         val edited = notesViewModel.editNote(noteId!!, title, content)
         if (edited) {
-            Toast.makeText(activity, "Note edited successfully" , Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Notitie succesvol aangepast." , Toast.LENGTH_SHORT).show()
             activity?.supportFragmentManager!!.popBackStack()
         } else {
-            Toast.makeText(activity, "Something went wrong while editing the note" , Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Er ging iets fout tijdens het aanpassen van de notitie." , Toast.LENGTH_SHORT).show()
         }
 
     }

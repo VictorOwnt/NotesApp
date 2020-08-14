@@ -114,13 +114,13 @@ class NotesFragment :
                    dialog, id -> dialog.dismiss()
                     val deleted = notesViewModel.deleteNote(note)
                     if(deleted) {
-                        Toast.makeText(activity, "Note deleted successfully" , Toast.LENGTH_SHORT).show()
+                        Toast.makeText(activity, "Notitie succesvol verwijderd." , Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(activity, "Something went wrong while deleting the note" , Toast.LENGTH_SHORT).show()
+                        Toast.makeText(activity, "Er ging iets fout bij het verwijderen van de notitie." , Toast.LENGTH_SHORT).show()
                     }
                 }
             val alert = dialogBuilder.create()
-            alert.setTitle("Are you sure you want to remove this note ?")
+            alert.setTitle("Ben je zeker dat je deze notitie wilt verwijderen?")
             alert.show()
         }
         adapter.onItemClick3 = { note ->
@@ -128,7 +128,7 @@ class NotesFragment :
             val clipData = ClipData.newPlainText("text", note.content)
             clipboardManager.setPrimaryClip(clipData)
 
-            Toast.makeText(activity, "Note copied to clipboard" , Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Notitie gekopieerd naar klembord." , Toast.LENGTH_SHORT).show()
         }
         notesRecyclerView.adapter = adapter
 

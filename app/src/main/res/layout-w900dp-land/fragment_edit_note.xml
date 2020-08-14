@@ -113,7 +113,7 @@
                 android:layout_marginBottom="@dimen/default_vertical_margin"
                 android:text="@string/action_note_edit"
                 android:enabled="false"
-                android:background="@drawable/drawable_cornered_button"
+                android:background="@drawable/button_selector"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
